@@ -1,6 +1,11 @@
 from random import *
 s=[]
 def arvud_loendis():
+    """:param arv n:int
+    :param arv mini:int
+    :param arv maxi:int
+    :rtype int
+    """
     print("Данные:")
     n=abs(int(input("Сколько целых чисел генерируем в список? => ")))
     mini=int(input("Введите минимальное число диапазона => "))
@@ -38,7 +43,7 @@ def vahetus(a:int,b:int):
     
 
 def generator(n:int,loend,a:int,b:int):
-    """
+    """генерирует рандомное числро в пределах a and b
     """
     for i in range (n):
         loend.append(randint(a,b))
@@ -54,6 +59,8 @@ def jagamine(loend:list,p:list,n:list,nol:list):
             nol(append(el))
 
 def keskmine(loend,n):
+    """Показывает среднее положительные и средне отрицательные числа
+    """
     n=len(loend)
     if n==0:
         kesk=0
@@ -65,6 +72,8 @@ def keskmine(loend,n):
     return kesk
 
 def lisamine(loend,el):
+    """ :param arv el: int and float
+    """
     loend.append(el)
     loend.sort()
 arvud_loendis()
